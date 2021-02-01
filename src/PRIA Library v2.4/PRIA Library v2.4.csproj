@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E77F46CD-CBDC-4514-A99E-35FC24043BB5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRIALibraryV24</RootNamespace>
+    <AssemblyName>PRIA Library v2.4</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Development|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Development\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PRIA Library v2.4.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Staging|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Staging\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\PRIA Library v2.4.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Production|AnyCPU'">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\PRIA Library v2.4.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CanonicalizationMethod_Type.cs" />
+    <Compile Include="DateTimeStamp_Type.cs" />
+    <Compile Include="DigestMethod_Type.cs" />
+    <Compile Include="DigestValue_Type.cs" />
+    <Compile Include="DSAKeyValue_Type.cs" />
+    <Compile Include="EFilePartialClasses.cs" />
+    <Compile Include="ElectronicSignatureTypeEnumerated.cs" />
+    <Compile Include="Exponent_Type.cs" />
+    <Compile Include="G_Type.cs" />
+    <Compile Include="HMACOutputLength_Type.cs" />
+    <Compile Include="J_Type.cs" />
+    <Compile Include="KeyInfo_Type.cs" />
+    <Compile Include="KeyName_Type.cs" />
+    <Compile Include="KeyValue_Type.cs" />
+    <Compile Include="Manifest_Type.cs" />
+    <Compile Include="MgmtData_Type.cs" />
+    <Compile Include="MISMO_DOCUMENT_Type.cs" />
+    <Compile Include="MISMO_ELECTRONIC_SIGNATURE_Type.cs" />
+    <Compile Include="MISMO_ELECTRONIC_SIGNATURE_TypeOTHER_SIGNATURE.cs" />
+    <Compile Include="MISMO_EMBEDDED_FILE_Type.cs" />
+    <Compile Include="MISMO_EXTERNAL_FILE_Type.cs" />
+    <Compile Include="MISMO_SIGNATURE_TYPE.cs" />
+    <Compile Include="Modulus_Type.cs" />
+    <Compile Include="Object_Type.cs" />
+    <Compile Include="PgenCounter_Type.cs" />
+    <Compile Include="PGPData_Type.cs" />
+    <Compile Include="PGPKeyID_Type.cs" />
+    <Compile Include="PGPKeyPacket_Type.cs" />
+    <Compile Include="PRIA_AliasTypeEnumerated.cs" />
+    <Compile Include="PRIA_AUTHORIZED_REPRESENTATIVE_Type.cs" />
+    <Compile Include="PRIA_BILL_TO_PARTY_Type.cs" />
+    <Compile Include="PRIA_BuildingStatusTypeEnumerated.cs" />
+    <Compile Include="PRIA_ConsiderationTypeEnumerated.cs" />
+    <Compile Include="PRIA_CONSIDERATION_Type.cs" />
+    <Compile Include="PRIA_ContactPointRoleTypeEnumerated.cs" />
+    <Compile Include="PRIA_ContactPointTypeEnumerated.cs" />
+    <Compile Include="PRIA_CONTACT_DETAIL_Type.cs" />
+    <Compile Include="PRIA_CONTACT_POINT_Type.cs" />
+    <Compile Include="PRIA_DOCUMENT_DATA_TYPE.cs" />
+    <Compile Include="PRIA_DOCUMENT_Type.cs" />
+    <Compile Include="PRIA_EMBEDDED_FILE_Type.cs" />
+    <Compile Include="PRIA_EXECUTION_Type.cs" />
+    <Compile Include="PRIA_GRANTEE_ALIAS_Type.cs" />
+    <Compile Include="PRIA_GRANTEE_Type.cs" />
+    <Compile Include="PRIA_GRANTOR_ALIAS_Type.cs" />
+    <Compile Include="PRIA_GRANTOR_Type.cs" />
+    <Compile Include="PRIA_KEY_Type.cs" />
+    <Compile Include="PRIA_LandUseTypeEnumerated.cs" />
+    <Compile Include="PRIA_MaritalStatusTypeEnumerated.cs" />
+    <Compile Include="PRIA_MORTGAGE_CONSIDERATION_Type.cs" />
+    <Compile Include="PRIA_NonPersonEntityDetailOrganizationTypeEnumerated.cs" />
+    <Compile Include="PRIA_NON_PERSON_ENTITY_DETAIL_Type.cs" />
+    <Compile Include="PRIA_NotaryCertificateSignerIdentificationTypeEnumerated.cs" />
+    <Compile Include="PRIA_NOTARY_CERTIFICATE_SIGNER_IDENTIFICATION_Type.cs" />
+    <Compile Include="PRIA_NOTARY_CERTIFICATE_Type.cs" />
+    <Compile Include="PRIA_NOTARY_Type.cs" />
+    <Compile Include="PRIA_ORIGINATING_RECORDING_REQUEST_Type.cs" />
+    <Compile Include="PRIA_PACKAGE_Type.cs" />
+    <Compile Include="PRIA_ParcelIdentificationTypeEnumerated.cs" />
+    <Compile Include="PRIA_PARCEL_IDENTIFICATION_Type.cs" />
+    <Compile Include="PRIA_PARSED_STREET_ADDRESS_Type.cs" />
+    <Compile Include="PRIA_PARTIES_PREPARED_BY_PARTY_Type.cs" />
+    <Compile Include="PRIA_PARTIES_RETURN_TO_PARTY_Type.cs" />
+    <Compile Include="PRIA_PARTIES_Type.cs" />
+    <Compile Include="PRIA_PaymentMethodType_Enumerated.cs" />
+    <Compile Include="PRIA_PAYMENT_Type.cs" />
+    <Compile Include="PRIA_PlattedLandTypeEnumerated.cs" />
+    <Compile Include="PRIA_PLATTED_LAND_Type.cs" />
+    <Compile Include="PRIA_PreferredResponseFormatEnumerated.cs" />
+    <Compile Include="PRIA_PreferredResponseMethodEnumerated.cs" />
+    <Compile Include="PRIA_PREFERRED_RESPONSE_Type.cs" />
+    <Compile Include="PRIA_PRIARequestType_Enumerated.cs" />
+    <Compile Include="PRIA_PRIAResponseType_Enumerated.cs" />
+    <Compile Include="PRIA_PropertyCurrentOccupancyTypeEnumerated.cs" />
+    <Compile Include="PRIA_PropertyLegalDescriptionTypeEnumerated.cs" />
+    <Compile Include="PRIA_PropertyRightsTypeEnumerated.cs" />
+    <Compile Include="PRIA_PropertyTitleCategoryTypeEnumerated.cs" />
+    <Compile Include="PRIA_PROPERTY_IDENTIFICATION_Type.cs" />
+    <Compile Include="PRIA_PROPERTY_LEGAL_DESCRIPTION_Type.cs" />
+    <Compile Include="PRIA_PROPERTY_Type.cs" />
+    <Compile Include="PRIA_RECEIVING_PARTY_Type.cs" />
+    <Compile Include="PRIA_RecordableDocumentAssociatedDocumentBookTypeEnumerated.cs" />
+    <Compile Include="PRIA_RecordableDocumentAssociatedDocumentTypeEnumerated.cs" />
+    <Compile Include="PRIA_RecordableDocumentTypeEnumerated.cs" />
+    <Compile Include="PRIA_RECORDABLE_DOCUMENT_ASSOCIATED_DOCUMENT_Type.cs" />
+    <Compile Include="PRIA_RECORDABLE_DOCUMENT_Type.cs" />
+    <Compile Include="PRIA_RecordingEndorsementVolumeTypeEnumerated.cs" />
+    <Compile Include="PRIA_RecordingTransactionIdentifierType_Enumerated.cs" />
+    <Compile Include="PRIA_RECORDING_ENDORSEMENT_EXEMPTIONS_Type.cs" />
+    <Compile Include="PRIA_RECORDING_ENDORSEMENT_FEES_RECORDING_FEE_Type.cs" />
+    <Compile Include="PRIA_RECORDING_ENDORSEMENT_FEES_Type.cs" />
+    <Compile Include="PRIA_RECORDING_ENDORSEMENT_Type.cs" />
+    <Compile Include="PRIA_RECORDING_ERROR_Type.cs" />
+    <Compile Include="PRIA_RECORDING_TRANSACTION_IDENTIFIER_Type.cs" />
+    <Compile Include="PRIA_REQUESTING_PARTY_Type.cs" />
+    <Compile Include="PRIA_REQUEST_GROUP_Type.cs" />
+    <Compile Include="PRIA_REQUEST_Type.cs" />
+    <Compile Include="PRIA_RESPONDING_PARTY_Type.cs" />
+    <Compile Include="PRIA_RESPOND_TO_PARTY_Type.cs" />
+    <Compile Include="PRIA_RESPONSE_GROUP_Type.cs" />
+    <Compile Include="PRIA_RESPONSE_Type.cs" />
+    <Compile Include="PRIA_ServicePaymentMethodTypeEnumerated.cs" />
+    <Compile Include="PRIA_SERVICE_PAYMENT_Type.cs" />
+    <Compile Include="PRIA_STATUS_Type.cs" />
+    <Compile Include="PRIA_SUBMITTING_PARTY_Type.cs" />
+    <Compile Include="PRIA_TAXABLE_PARTY_Type.cs" />
+    <Compile Include="PRIA_UnplattedLandDescriptionTypeEnumerated.cs" />
+    <Compile Include="PRIA_UNPLATTED_LAND_Type.cs" />
+    <Compile Include="PRIA_VOLUME_PAGE_Type.cs" />
+    <Compile Include="PRIA_WITNESS_Type.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="P_Type.cs" />
+    <Compile Include="Q_Type.cs" />
+    <Compile Include="Reference_Type.cs" />
+    <Compile Include="REQUEST_Type.cs" />
+    <Compile Include="RESPONSE_Type.cs" />
+    <Compile Include="RetrievalMethod_Type.cs" />
+    <Compile Include="RSAKeyValue_Type.cs" />
+    <Compile Include="Seed_Type.cs" />
+    <Compile Include="SignatureMethod_Type.cs" />
+    <Compile Include="SignatureProperties_Type.cs" />
+    <Compile Include="SignatureProperty_Type.cs" />
+    <Compile Include="SignatureValue_Type.cs" />
+    <Compile Include="SIGNATURE_TEXT_Type.cs" />
+    <Compile Include="Signature_Type.cs" />
+    <Compile Include="SignedInfo_Type.cs" />
+    <Compile Include="SPKIData_Type.cs" />
+    <Compile Include="SPKISexp_Type.cs" />
+    <Compile Include="Transform_Type.cs" />
+    <Compile Include="X509Certificate_Type.cs" />
+    <Compile Include="X509CRL_Type.cs" />
+    <Compile Include="X509Data_Type.cs" />
+    <Compile Include="X509IssuerName_Type.cs" />
+    <Compile Include="X509IssuerSerial_Type.cs" />
+    <Compile Include="X509SerialNumber_Type.cs" />
+    <Compile Include="X509SKI_Type.cs" />
+    <Compile Include="X509SubjectName_Type.cs" />
+    <Compile Include="XPath_Type.cs" />
+    <Compile Include="Y_Type.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
