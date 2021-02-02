@@ -1,0 +1,10 @@
+﻿CHANGE TRACKING. 
+
+Unpublished changes:
+
+10/27/2010: 
+-added asttribute to documentImage to indicate if it is a recordable image
+-added non-person indicator to FilingParty
+-added abstracted type for document in embedded image tag.
+-fixed a bug with filing sequencing
+-fixed a bug recording endorsements and non-recordable documents.
