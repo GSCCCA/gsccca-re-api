@@ -539,23 +539,19 @@ namespace GSCCCA_API_DEMO
             parts[1] = "Single Page Satisfaction Document";
             lstSubmit.Items.Add(new ListViewItem(parts));
 
-            //Add a three page satisfaction.  I don't know if these even exist, but it is intended to allow for multiple images.
+            //Add a three page satisfaction.
             parts[0] = "satisfaction2.xml";
             parts[1] = "Multi-page Satisfaction Document";
             lstSubmit.Items.Add(new ListViewItem(parts));
 
-            //Add a single page satisfaction with some non-recordable document.
+            //Add a single page satisfaction
             parts[0] = "satisfaction3.xml";
-            parts[1] = "Satisfaction with an additional, non-recordable document";
+            parts[1] = "Satisfaction with an additional document";
             lstSubmit.Items.Add(new ListViewItem(parts));
 
-            //Add a single page satisfaction with some non-recordable document.
+            //Add a single page satisfaction
             parts[0] = "satisfaction4.xml";
-            lstSubmit.Items.Add(new ListViewItem(parts));
-
-            //Add a generic test line
-            parts[0] = "Troubleshooting.xml";
-            parts[1] = "Internal test.";
+            parts[1] = "Satisfaction with an additional document";
             lstSubmit.Items.Add(new ListViewItem(parts));
         }
 
