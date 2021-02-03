@@ -67,17 +67,12 @@
     <Compile Include="RejectionReason.cs" />
     <Compile Include="RejectionReasons.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PRIA\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PRIA Library v2.4\PRIA Library v2.4.csproj">
       <Project>{E77F46CD-CBDC-4514-A99E-35FC24043BB5}</Project>
       <Name>PRIA Library v2.4</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="CHANGELOG.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
