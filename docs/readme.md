@@ -1,9 +1,7 @@
-# Documentation
-
-## GSCCCA.RealEstate Help.chm
+### GSCCCA.RealEstate Help.chm
 A compiled HTML formatted help file is included. This allows easy navigation of source objects in a quickly referenceable file.
 
-## Implementation Guides
+### Implementation Guides
 Various implementation guides are located on the [GSCCCA eFile website][0]. Read over the Real Estate eFiling Guides for assistance on integration.
 
 [0]: https://efile.gsccca.org/Implementers.aspx
