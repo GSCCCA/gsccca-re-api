@@ -128,7 +128,20 @@ namespace GSCCCA.RealEstate
             return endorse;
         }
 
+        private static IEnumerable<FilingFee> GetEstimatedFees(PRIALibraryV24.PRIA_CONSIDERATION_Type[] considerations)
+        {
+            if (considerations is null) yield break;
 
+            var estimates = considerations.Where(p => p._Type == PRIA_ConsiderationTypeEnumerated.Other
+                                                   && !string.IsNullOrEmpty(p._TypeOtherDescription)
+                                                   && FeeEstimateTypes.Keys.ToList().Contains(p._TypeOtherDescription)
+                                                   && double.TryParse(p._Amount, out double _));
+
+            foreach (var estimate in estimates)
+            {
+                yield return new FilingFee(double.Parse(estimate._Amount), estimate._TypeOtherDescription);
+            }
+        }
 
         /// <summary>
         /// Maps a GSCCCA docket type to a PRIA Volume Type
@@ -178,7 +191,67 @@ namespace GSCCCA.RealEstate
             return this.ToPriaDocument(1);
         }
 
+        /// <summary>
+        /// Gets / Sets a collection of estimated fees associated with this Filing
+        /// </summary>
+        public List<FilingFee> FeeEstimates
+        {
+            get;
+            set;
+        }
 
+        /// <summary>
+        /// There is a set list of allowed estimated fees.
+        /// This is provided for programmatic usage of estimates.
+        /// </summary>
+        public enum FeeEstimateType
+        {
+            /// <summary>
+            /// Estimated Base Filing Fee
+            /// </summary>
+            Base = 0,
+            /// <summary>
+            /// Estimated Assigned Fees
+            /// </summary>
+            Assigned,
+            /// <summary>
+            /// Estimated Documents Being Cancelled Fees
+            /// </summary>
+            Cancelled,
+            /// <summary>
+            /// Estimated Cross Index Fees
+            /// </summary>
+            Xref,
+            /// <summary>
+            /// Estimated PT-61 Tax
+            /// </summary>
+            TransferTax,
+            /// <summary>
+            /// Estimated Intangible Tax
+            /// </summary>
+            IntangibleTax,
+            /// <summary>
+            /// Estimated Page Fees
+            /// </summary>
+            Pages,
+        }
+
+        /// <summary>
+        /// Convert the XML string to an enumerated value for programmatic use
+        /// </summary>
+        public static Dictionary<string, FeeEstimateType> FeeEstimateTypes
+        {
+            get => new Dictionary<string, FeeEstimateType>()
+            {
+                {"Estimated Base Filing Fee", FeeEstimateType.Base },
+                {"Estimated Assigned Fees", FeeEstimateType.Assigned },
+                {"Estimated Documents Being Cancelled Fees", FeeEstimateType.Cancelled },
+                {"Estimated Cross Index Fees", FeeEstimateType.Xref },
+                {"Estimated PT-61 Tax", FeeEstimateType.TransferTax },
+                {"Estimated Intangible Tax", FeeEstimateType.IntangibleTax },
+                {"Estimated Page Fees", FeeEstimateType.Pages },
+            };
+        }
 
         /// <summary>
         /// Gets / Sets a collection of recording fees associated with this AcceptedFiling
@@ -408,6 +481,8 @@ namespace GSCCCA.RealEstate
                     }
                 }
 
+                f.FeeEstimates = GetEstimatedFees(doc.CONSIDERATION).ToList();
+
                 //get the endorsement
                 if (doc.RECORDING_ENDORSEMENT != null)
                 {
@@ -446,7 +521,7 @@ namespace GSCCCA.RealEstate
                 }
 
             }
-            catch
+            catch (Exception ex)
             {
                 f = null;
             }
