@@ -14,6 +14,9 @@ namespace GSCCCA.RealEstate
         public bool Valid { get; set; }
         public string CallStatus { get; set; }
         public string NewPT61Number { get; set; }
+        public string Active { get; set; }
+        public string Book { get; set; }
+        public string Page { get; set; }
         public string RawXML { get; set; }
 
     }
