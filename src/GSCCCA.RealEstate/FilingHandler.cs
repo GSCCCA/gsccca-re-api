@@ -412,6 +412,7 @@ namespace GSCCCA.RealEstate
             //Send the request and receive a response.
             string responseXML = PRIAAcceptPackage(requestXML);
             this.rawresponse = responseXML;
+            this.AcceptResponse = createPriaResponse(responseXML);
 
             //Analyze the response
             return processResponse(responseXML, "RECORDED");
@@ -575,6 +576,11 @@ namespace GSCCCA.RealEstate
         {
             get { return this.rawrequest; }
         }
+
+        /// <summary>
+        /// After a web method call to REService.Accept, access response object
+        /// </summary>
+        public PRIA_RESPONSE_GROUP_Type AcceptResponse { get; private set; } = default;
 
         /// <summary>
         /// Gets the raw xml response received by this FilingHandler after invoking one of the non-PRIA convenience methods
