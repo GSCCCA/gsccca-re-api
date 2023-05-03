@@ -90,6 +90,10 @@
       <Project>{3D0774D8-48A7-466A-A2BA-1E11F154966C}</Project>
       <Name>GSCCCA.RealEstate</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\src\PRIA Library v2.4\PRIA Library v2.4.csproj">
+      <Project>{E77F46CD-CBDC-4514-A99E-35FC24043BB5}</Project>
+      <Name>PRIA Library v2.4</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="satisfaction1.xml">

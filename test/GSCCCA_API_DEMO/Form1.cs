@@ -511,6 +511,14 @@ namespace GSCCCA_API_DEMO
                     string response = filingManager.RawXMLResponse;
                     Console.WriteLine(response);
                 }
+                else if ("warning".Equals(filingManager.AcceptResponse.RESPONSE.First().STATUS.First()._Condition, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    // Create a warning response in this case.
+                    // This is still a success condition, but with
+                    //  an alert that should be shown to the end user
+                    //  that is found in the Status._Description.
+                    showSuccess();
+                }
                 else
                 {
                     showSuccess();
