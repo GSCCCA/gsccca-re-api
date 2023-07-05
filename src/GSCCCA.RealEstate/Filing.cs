@@ -234,6 +234,14 @@ namespace GSCCCA.RealEstate
             /// Estimated Page Fees
             /// </summary>
             Pages,
+            /// <summary>
+            /// Estimated Penalties
+            /// </summary>
+            Penalties,
+            /// <summary>
+            /// Estimated Interest
+            /// </summary>
+            Interest,
         }
 
         /// <summary>
@@ -250,6 +258,8 @@ namespace GSCCCA.RealEstate
                 {"Estimated PT-61 Tax", FeeEstimateType.TransferTax },
                 {"Estimated Intangible Tax", FeeEstimateType.IntangibleTax },
                 {"Estimated Page Fees", FeeEstimateType.Pages },
+                {"Estimated Penalties", FeeEstimateType.Penalties },
+                {"Estimated Interest", FeeEstimateType.Interest },
             };
         }
 
