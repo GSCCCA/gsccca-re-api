@@ -313,7 +313,7 @@ namespace GSCCCA.RealEstate
                 doc.GRANTEE = new PRIA_GRANTEE_Type[grantees.Count];
                 foreach (FilingParty p in this.grantees)
                 {
-                    doc.GRANTEE[indexer] = p.ToPriaGrantee();
+                    doc.GRANTEE[indexer++] = p.ToPriaGrantee();
                 }
             }
             else
@@ -330,7 +330,7 @@ namespace GSCCCA.RealEstate
                 doc.GRANTOR = new PRIA_GRANTOR_Type[grantors.Count];
                 foreach (FilingParty p in this.grantors)
                 {
-                    doc.GRANTOR[indexer] = p.ToPriaGrantor();
+                    doc.GRANTOR[indexer++] = p.ToPriaGrantor();
                 }
             }
             else
@@ -345,7 +345,7 @@ namespace GSCCCA.RealEstate
             {
                 doc.EMBEDDED_FILE = new PRIA_EMBEDDED_FILE_Type[fileCount];
 
-                int fileSequence = 1;
+                int fileSequence = 0;
                 foreach (DocumentImage file in this.documents)
                 {
                     PRIA_EMBEDDED_FILE_Type f = new PRIA_EMBEDDED_FILE_Type();
@@ -368,7 +368,7 @@ namespace GSCCCA.RealEstate
                     }
                     f.FileEncodingType = "Base64";
                     f.ID = fileSequence.ToString();
-                    doc.EMBEDDED_FILE[fileSequence - 1] = f;
+                    doc.EMBEDDED_FILE[fileSequence++] = f;
 
                 }
             }
