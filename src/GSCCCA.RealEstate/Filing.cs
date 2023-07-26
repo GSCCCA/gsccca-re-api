@@ -305,7 +305,7 @@ namespace GSCCCA.RealEstate
             {
                 _UniqueIdentifier = gscccaID.ToString(),
                 RecordableDocumentTypeCode = (PRIA_RecordableDocumentTypeEnumerated)Enum.Parse(typeof(PRIA_RecordableDocumentTypeEnumerated), documentTypeName),
-                RecordableDocumentTypeOtherDescription = DocumentOtherTypeDescription
+                RecordableDocumentTypeOtherDescription = DocumentTypeOtherDescription
             };
 
             if (!this.recordable)
@@ -427,7 +427,7 @@ namespace GSCCCA.RealEstate
         /// <summary>
         /// Gets/set the description of the document type. 
         /// </summary>
-        public string DocumentOtherTypeDescription
+        public string DocumentTypeOtherDescription
         {
             get => string.IsNullOrEmpty(documentOtherTypeDescription) ? documentTypeName : documentOtherTypeDescription;
             set => documentOtherTypeDescription = value;

@@ -471,7 +471,7 @@ namespace GSCCCA_API_DEMO
                     if (f.Recordable)
                     {
                         // You can enter descriptive text to include with a filing.
-                        f.DocumentOtherTypeDescription = "TEST";
+                        f.DocumentTypeOtherDescription = "TEST";
 
                         //Assign the endorsement info
                         f.Endorsement.Book = this.txtBook.Text;
