@@ -38,9 +38,14 @@ namespace GSCCCA.RealEstate
         protected bool recordable = true;
 
         /// <summary>
-        /// Stores information about the doucment type represented by this filing.
+        /// Stores information about the document type represented by this filing.
         /// </summary>
         protected string documentTypeName = "";
+
+        /// <summary>
+        /// Stores information about the document description represented by this filing.
+        /// </summary>
+        protected string documentOtherTypeDescription = "";
 
         /// <summary>
         /// Endorsement information
@@ -296,9 +301,12 @@ namespace GSCCCA.RealEstate
         /// <returns>A fully populated Pria Document</returns>
         internal virtual PRIA_DOCUMENT_Type ToPriaDocument(int sequence)
         {
-            PRIA_DOCUMENT_Type doc = new PRIA_DOCUMENT_Type();
-            doc._UniqueIdentifier = this.gscccaID.ToString();
-            doc.RecordableDocumentTypeCode = (PRIA_RecordableDocumentTypeEnumerated)Enum.Parse(typeof(PRIA_RecordableDocumentTypeEnumerated), documentTypeName);
+            var doc = new PRIA_DOCUMENT_Type
+            {
+                _UniqueIdentifier = gscccaID.ToString(),
+                RecordableDocumentTypeCode = (PRIA_RecordableDocumentTypeEnumerated)Enum.Parse(typeof(PRIA_RecordableDocumentTypeEnumerated), documentTypeName),
+                RecordableDocumentTypeOtherDescription = DocumentTypeOtherDescription
+            };
 
             if (!this.recordable)
                 doc.DocumentNonRecordableIndicator = "Y";
@@ -414,6 +422,15 @@ namespace GSCCCA.RealEstate
         {
             get { return this.documentTypeName; }
             set { this.documentTypeName = value; }
+        }
+
+        /// <summary>
+        /// Gets/set the description of the document type. 
+        /// </summary>
+        public string DocumentTypeOtherDescription
+        {
+            get => string.IsNullOrEmpty(documentOtherTypeDescription) ? documentTypeName : documentOtherTypeDescription;
+            set => documentOtherTypeDescription = value;
         }
 
         /// <summary>
