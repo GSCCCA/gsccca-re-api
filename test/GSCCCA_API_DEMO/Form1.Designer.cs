@@ -189,7 +189,7 @@
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(354, 20);
             this.txtURL.TabIndex = 4;
-            this.txtURL.Text = "https://efiledev.gsccca.org/efilewebservice/REservice.asmx";
+            this.txtURL.Text = "https://efilestg.gsccca.org/efilewebservice/REservice.asmx";
             // 
             // txtPassword
             // 
